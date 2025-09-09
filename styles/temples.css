@@ -1,0 +1,120 @@
+/* Mobile-first styles */
+:root{
+  --brand:#3a0a64;   /* header */
+  --ink:#333;
+  --paper:#fff;
+  --muted:#f2f2f2;
+}
+
+*{ box-sizing:border-box; }
+
+html,body{
+  margin:0;
+  padding:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Roboto', system-ui, -apple-system, sans-serif;
+  line-height:1.6;
+}
+
+.wrapper{
+  max-width:1000px;
+  margin-inline:auto;
+  padding-inline:1rem;
+}
+
+/* Header + Nav */
+.site-header{
+  background:var(--brand);
+  color:white;
+}
+.site-header .wrapper{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding:1rem 0.75rem;
+}
+
+.site-title{
+  font-weight:700;
+  font-size:1.25rem;
+}
+
+.menu-btn{
+  font-size:1.5rem;
+  background:transparent;
+  border:none;
+  color:white;
+  cursor:pointer;
+  line-height:1;
+}
+
+/* nav hidden by default on mobile */
+.site-nav{
+  width:100%;
+  display:none;
+}
+.site-nav.open{
+  display:block;
+}
+.nav-links{
+  list-style:none;
+  padding:0;
+  margin:0.5rem 0 0 0;
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem;
+}
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  padding:0.5rem 0.25rem;
+  border-radius:0.5rem;
+}
+.nav-links a:hover{
+  background:rgba(255,255,255,0.15);
+}
+
+/* Main */
+main h1{
+  text-align:center;
+  margin:1.25rem 0;
+}
+
+/* One-column gallery on mobile */
+.gallery{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1rem;
+  margin-bottom:2rem;
+}
+figure{
+  background:var(--muted);
+  border:1px solid #e5e5e5;
+  border-radius:0.75rem;
+  padding:0.75rem;
+}
+figure img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:0.5rem;
+}
+figcaption{
+  text-align:center;
+  font-weight:700;
+  margin-top:0.5rem;
+}
+
+/* Footer */
+.site-footer{
+  background:#eee;
+  margin-top:2rem;
+  padding:1rem 0;
+}
+.site-footer p{
+  margin:0.25rem 0;
+  text-align:center;
+  color:#555;
+}

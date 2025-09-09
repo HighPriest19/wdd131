@@ -1,0 +1,16 @@
+/* Larger view overrides (desktop/tablet) */
+@media (min-width: 700px){
+  /* Show nav inline, hide hamburger */
+  .menu-btn{ display:none; }
+  .site-nav{ display:block; width:auto; }
+  .nav-links{
+    flex-direction:row;
+    gap:1rem;
+    margin:0;
+  }
+
+  /* Multi-column gallery */
+  .gallery{
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
