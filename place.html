@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore real-time data and weather information for Madagascar.">
+  <meta name="author" content="Hinckley Olagunju">
+  <title>Madagascar Country Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/place.css">
+  <link rel="stylesheet" href="styles/place-large.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Madagascar</h1>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <div class="hero-section">
+      <picture class="hero">
+        <source media="(min-width: 1000px)" srcset="images/madagascar.webp">
+        <source media="(min-width: 620px)" srcset="images/madagascar.jpg">
+        <img src="images/madagascar.jpg" alt="Madagascar landscape">
+      </picture>
+    </div>
+
+    <!-- Data -->
+    <div class="data">
+      <h2 class="box-title">Data</h2>
+      <table>
+        <tr><td class="label"><b>Area:</b></td><td>587,041 km²</td></tr>
+        <tr><td class="label"><b>Population:</b></td><td>29,611,714</td></tr>
+        <tr><td class="label"><b>Capital:</b></td><td>Antananarivo</td></tr>
+        <tr><td class="label"><b>Languages:</b></td><td>Malagasy, French</td></tr>
+        <tr><td class="label"><b>Currency:</b></td><td>Malagasy Ariary</td></tr>
+        <tr><td class="label"><b>Climate:</b></td><td>Tropical</td></tr>
+        <tr><td class="label"><b>Independence:</b></td><td>1960</td></tr>
+        <tr><td class="label"><b>Driving Side:</b></td><td>Right</td></tr>
+      </table>
+    </div>
+
+    <!-- Weather -->
+    <div class="weather">
+      <h2 class="box-title">Weather <span class="weather-icon">&#9728;</span></h2>
+      <img src="images/weather-icon.svg" alt="sunny weather" class="weather-icon-mobile">
+      <table>
+        <tr><td class="label"><b>Temperature:</b></td><td>26 °C</td></tr>
+        <tr><td class="label"><b>Conditions:</b></td><td>Sunny</td></tr>
+        <tr><td class="label"><b>Wind:</b></td><td>12 km/h</td></tr>
+        <tr><td class="label"><b>Humidity:</b></td><td>72%</td></tr>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="currentyear"></span> Hinckley Olagunju ✨ Madagascar</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
+
+
+
+
