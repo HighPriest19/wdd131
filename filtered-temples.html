@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Filtered Temples</title>
+  <meta name="description" content="WDD 131 Filtered Temples Album" />
+  <meta name="author" content="Olasunkanmi Hinckley Olagunju" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/filtered-temples-large.css">
+
+  <!-- JS -->
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <span class="site-title">Temple Album</span>
+
+      <button id="menu" class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+
+      <nav class="site-nav" id="site-nav">
+        <ul class="nav-links">
+          <li><a href="#" id="home">Home</a></li>
+          <li><a href="#" id="old">Old</a></li>
+          <li><a href="#" id="new">New</a></li>
+          <li><a href="#" id="large">Large</a></li>
+          <li><a href="#" id="small">Small</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <h1>Temples</h1>
+    <h2>Temple Gallery</h2>
+    <!-- Empty section that JS will fill -->
+    <section id="temple-cards" class="gallery"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <p>&copy; <span id="currentyear"></span> Olasunkanmi Hinckley Olagunju | Nigeria</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+</body>
+</html>
