@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Subject - Gaming</title>
+  <meta name="description" content="WDD 131 Project Subject Declaration">
+  <meta name="author" content="Olasunkanmi Hinckley Olagunju">
+  <link rel="stylesheet" href="styles/project.css">
+</head>
+<body>
+  <header>
+    <h1>WDD 131 Project Subject</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Subject: Gaming</h2>
+      <p>
+        My website will focus on <strong>gaming</strong>. It will include sections about popular video games,
+        gaming news, upcoming releases, and tips for players. I will also include a gallery of images, reviews,
+        and possibly a page about gaming history and culture.
+      </p>
+      <p>
+        I chose this subject because gaming is one of my main interests. Creating a website about gaming will allow
+        me to build something fun, creative, and personally meaningful while also practicing my web development skills.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Olasunkanmi Hinckley Olagunju | Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script>
+    // Footer dynamic dates
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+  </script>
+</body>
+</html>
