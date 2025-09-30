@@ -1,0 +1,106 @@
+:root {
+  --main-bg: #f9f9fb;
+  --primary: #2a4d69;
+  --secondary: #4b86b4;
+  --accent: #adcbe3;
+  --light: #e7eff6;
+  --text: #1b1b1e;
+  --hover: #63ace5;
+  --font: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--main-bg);
+  color: var(--text);
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 1rem;
+  background: var(--primary);
+  color: white;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  background: var(--light);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+label, legend {
+  font-weight: 600;
+  margin-top: 10px;
+  display: block;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  border: 1px solid var(--secondary);
+  border-radius: 4px;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  width: auto;
+  margin-right: 6px;
+}
+
+input[type="submit"] {
+  margin-top: 16px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: var(--hover);
+}
+
+/* Star rating */
+.rating {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  display: inline-flex;
+}
+.rating input {
+  display: none;
+}
+.rating label {
+  font-size: 2rem;
+  color: var(--secondary);
+  cursor: pointer;
+}
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: gold;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}

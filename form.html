@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Product Review</title>
+  <meta name="description" content="Leave your review for one of our products">
+  <meta name="author" content="Your Name Here">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Customer Product Review</h1>
+  </header>
+
+  <main>
+    <form method="get" action="review.html">
+      <!-- Product Selection -->
+      <label for="product-name">Select a Product</label>
+      <select id="product-name" name="product-name" required>
+        <option value="" disabled selected>-- Choose a product --</option>
+      </select>
+
+      <!-- Star Rating -->
+      <fieldset>
+        <legend>Rate this product</legend>
+        <div class="rating">
+          <input type="radio" id="star5" name="rating" value="5" required><label for="star5">&#9733;</label>
+          <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
+          <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
+          <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
+          <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
+        </div>
+      </fieldset>
+
+      <!-- Date -->
+      <label for="date">Date of Installation</label>
+      <input type="date" id="date" name="date" required>
+
+      <!-- Features -->
+      <fieldset>
+        <legend>Which features were most helpful? (check all that apply)</legend>
+        <label><input type="checkbox" name="features" value="durability"> Durability</label>
+        <label><input type="checkbox" name="features" value="usability"> Ease of Use</label>
+        <label><input type="checkbox" name="features" value="design"> Design</label>
+        <label><input type="checkbox" name="features" value="performance"> Performance</label>
+      </fieldset>
+
+      <!-- Optional fields -->
+      <label for="review">Write a short review (optional)</label>
+      <textarea id="review" name="review"></textarea>
+
+      <label for="username">Your Name (optional)</label>
+      <input type="text" id="username" name="username">
+
+      <input type="submit" value="Submit Review">
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="currentyear"></span> Olasunkanmi Hinckley Olagunju 🏀</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

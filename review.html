@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Submitted</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+  <main>
+    <h1>🎉 Thank You for Your Feedback!</h1>
+    <p id="summary"></p>
+    <p id="count"></p>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Increase review counter
+      let count = parseInt(localStorage.getItem("reviewCount")) || 0;
+      count++;
+      localStorage.setItem("reviewCount", count);
+
+      // Show total reviews
+      document.getElementById("count").textContent =
+        `Total reviews submitted so far: ${count}`;
+
+      // Show product name from form submission
+      const params = new URLSearchParams(window.location.search);
+      const product = params.get("product-name");
+      if (product) {
+        document.getElementById("summary").textContent =
+          `You just reviewed: ${product}`;
+      }
+    });
+  </script>
+</body>
+</html>
