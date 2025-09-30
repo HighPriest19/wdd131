@@ -104,3 +104,7 @@ footer {
   margin-top: 20px;
   font-size: 0.9rem;
 }
+
+body {
+  font-family: 'Poppins', 'Roboto', sans-serif;
+}
