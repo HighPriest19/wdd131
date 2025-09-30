@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gaming Website Plan</title>
+  <meta name="description" content="WDD131 Site Plan - Gaming" />
+  <meta name="author" content="Olasunkanmi Hinckley Olagunju" />
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!-- Link to CSS (update path if you put CSS in a subfolder) -->
+  <link rel="stylesheet" href="styles/project.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Gaming Website Plan</h1>
+      <p class="byline">By Olasunkanmi Hinckley Olagunju</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section id="site-name">
+        <h2>Site Name</h2>
+        <p><strong>Next Level Gaming Hub</strong></p>
+        <p>This name reflects the site’s focus on gaming news, reviews, tips and culture. Optional domain: <em>nextlevelgaminghub.com</em></p>
+      </section>
+
+      <section id="purpose">
+        <h2>Site Purpose</h2>
+        <p>The site provides a hub for gamers: news, upcoming releases, reviews, guides, and a gallery. The goal is help players discover games and improve their skills.</p>
+      </section>
+
+      <section id="scenarios">
+        <h2>Scenarios</h2>
+        <ul>
+          <li>What are the most anticipated releases this year?</li>
+          <li>Where can I find reviews and tips for my favorite game?</li>
+        </ul>
+      </section>
+
+      <section id="colors">
+        <h2>Color Schema</h2>
+        <p>Dark theme with neon accent:</p>
+        <div class="color-row">
+          <div class="color-sample color-primary">#1e1e2f<br><span class="swatch-label">background</span></div>
+          <div class="color-sample color-accent">#ff4757<br><span class="swatch-label">accent</span></div>
+          <div class="color-sample color-text">#f1f2f6<br><span class="swatch-label">text</span></div>
+        </div>
+      </section>
+
+      <section id="typography">
+        <h2>Typography</h2>
+        <ul>
+          <li><strong>Roboto</strong> — body text and UI</li>
+          <li><strong>Press Start 2P</strong> — headings / logo for retro gaming feel</li>
+        </ul>
+      </section>
+
+      <section id="wireframe">
+        <h2>Wireframe</h2>
+        <p>Mobile view (left) and desktop view (right). Images below are example sketches.</p>
+
+        <!-- Make sure these image files exist: images/wireframe-mobile.png, images/wireframe-desktop.png -->
+        <img src="images/wireframe-mobile.png" alt="Mobile wireframe" class="wireframe" />
+        <img src="images/wireframe-desktop.png" alt="Desktop wireframe" class="wireframe" />
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Olasunkanmi Hinckley Olagunju | Nigeria</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
+  <script>
+    // footer dates
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = 'Last Modified: ' + document.lastModified;
+  </script>
+</body>
+</html>
