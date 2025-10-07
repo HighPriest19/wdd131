@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Recipes — FoodieFind</title>
+  <meta name="description" content="Browse recipes by type and prep time" />
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script src="scripts/scripts.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner container">
+      <div class="brand">
+        <!-- ✅ Inline SVG Logo -->
+        <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-label="FoodieFind logo">
+          <circle cx="32" cy="32" r="30" fill="var(--accent-color)" />
+          <path d="M20 28h24v8H20z" fill="#fff"/>
+          <circle cx="24" cy="32" r="2" fill="var(--accent-color-light)" />
+          <circle cx="40" cy="32" r="2" fill="var(--accent-color-light)" />
+        </svg>
+        <span class="brand-title">FoodieFind</span>
+      </div>
+
+      <nav id="site-nav-2" class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="recipes.html" class="nav-link active">Recipes</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle-2" class="icon-btn" aria-label="Toggle theme" title="Toggle theme">
+          <i id="theme-icon-2" class="fa-solid fa-moon"></i>
+        </button>
+        <button id="menu-toggle-2" class="icon-btn mobile-only" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="explore-head">
+      <h1>Recipe Explorer</h1>
+      <div class="controls">
+        <label for="filter">Filter</label>
+        <select id="filter">
+          <option value="all">All</option>
+          <option value="vegetarian">Vegetarian</option>
+          <option value="quick">Quick Meals</option>
+          <option value="dessert">Desserts</option>
+        </select>
+
+        <label for="sort">Sort</label>
+        <select id="sort">
+          <option value="default">Default</option>
+          <option value="time-asc">Prep ↑</option>
+          <option value="time-desc">Prep ↓</option>
+        </select>
+      </div>
+    </div>
+
+    <section id="recipe-grid" class="grid"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year-2"></span> FoodieFind</div>
+      <div id="last-mod-2" class="muted"></div>
+    </div>
+  </footer>
+</body>
+</html>
+

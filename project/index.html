@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FoodieFind — Recipes & Restaurants</title>
+  <meta name="description" content="Discover recipes and restaurants — FoodieFind" />
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script src="scripts/scripts.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner container">
+      <div class="brand">
+        <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+          <circle cx="40" cy="40" r="38" fill="var(--accent-color)" />
+          <text x="50%" y="55%" text-anchor="middle" fill="#fff" font-size="24" font-family="Poppins, sans-serif" dy=".3em">🍔</text>
+        </svg>
+        <span class="brand-title">FoodieFind</span>
+      </div>
+
+      <nav id="site-nav" class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="recipes.html" class="nav-link">Recipes</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- 🌓 Theme toggle -->
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme" title="Toggle theme">
+          <i id="theme-icon" class="fa-solid fa-moon"></i>
+        </button>
+
+        <!-- 📱 Mobile menu -->
+        <button id="menu-toggle" class="icon-btn mobile-only" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img src="images/hero-banner.jpg" alt="Hero food" class="hero-img">
+    <div class="hero-overlay">
+      <div class="container hero-content">
+        <h1>Find. Cook. Enjoy.</h1>
+        <p>Explore delicious recipes and local restaurants — curated for food lovers.</p>
+        <div class="hero-cta">
+          <a class="btn" href="recipes.html">Explore Recipes</a>
+          <a class="btn btn-outline" href="contact.html">Share a Recipe</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="featured">
+      <h2>Featured Recipes</h2>
+      <div id="featured-grid" class="grid"></div>
+    </section>
+
+    <section class="restaurants">
+      <h2>Local Picks</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="images/restaurant1.jpg" alt="Restaurant 1">
+          <h3>Urban Bistro</h3>
+          <p>Contemporary dining with seasonal menus.</p>
+        </article>
+        <article class="card">
+          <img src="images/restaurant2.jpg" alt="Restaurant 2">
+          <h3>Patio Eats</h3>
+          <p>Outdoor seating and local favorites.</p>
+        </article>
+        <article class="card">
+          <img src="images/restaurant3.jpg" alt="Restaurant 3">
+          <h3>Café Corner</h3>
+          <p>Cozy spot for coffee and pastries.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> FoodieFind — Olasunkanmi Hinckley Olagunju</div>
+      <div id="last-mod" class="muted"></div>
+    </div>
+  </footer>
+</body>
+</html>
+
+

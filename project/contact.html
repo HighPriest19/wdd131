@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — FoodieFind</title>
+  <meta name="description" content="Share a recipe or recommend a restaurant" />
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script src="scripts/scripts.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner container">
+      <div class="brand">
+        <!-- ✅ Inline SVG logo (no image file needed) -->
+        <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-label="FoodieFind logo">
+          <circle cx="32" cy="32" r="30" fill="var(--accent-color)" />
+          <path d="M20 28h24v8H20z" fill="#fff"/>
+          <circle cx="24" cy="32" r="2" fill="var(--accent-color-light)" />
+          <circle cx="40" cy="32" r="2" fill="var(--accent-color-light)" />
+        </svg>
+        <span class="brand-title">FoodieFind</span>
+      </div>
+
+      <nav id="site-nav-3" class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="recipes.html" class="nav-link">Recipes</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle-3" class="icon-btn" aria-label="Toggle theme" title="Toggle theme">
+          <i id="theme-icon-3" class="fa-solid fa-moon"></i>
+        </button>
+        <button id="menu-toggle-3" class="icon-btn mobile-only" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero small">
+    <img src="images/contact-hero.jpg" alt="Contact hero" class="hero-img">
+    <div class="hero-overlay">
+      <div class="container hero-content">
+        <h1>Share a Recipe or Restaurant</h1>
+      </div>
+    </div>
+  </section>
+
+  <main class="container contact-layout">
+    <form id="suggest-form" class="contact-form" aria-label="Suggestion form">
+      <label for="name">Your name</label>
+      <input id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+
+      <label for="type">Suggestion type</label>
+      <select id="type" name="type" required>
+        <option value="recipe">Recipe</option>
+        <option value="restaurant">Restaurant</option>
+      </select>
+
+      <label for="details">Details</label>
+      <textarea id="details" name="details" rows="6" required></textarea>
+
+      <button type="submit" class="btn">Submit</button>
+      <p id="confirm" class="muted" aria-live="polite"></p>
+    </form>
+
+    <aside class="contact-info">
+      <h3>Contact Info</h3>
+      <p><i class="fa-solid fa-location-dot"></i> Ondo, Nigeria</p>
+      <p><i class="fa-solid fa-phone"></i> +234 704 495 3844</p>
+      <p><i class="fa-regular fa-envelope"></i> hinckleyolagunju@gmail.com</p>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year-3"></span> FoodieFind</div>
+      <div id="last-mod-3" class="muted"></div>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
