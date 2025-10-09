@@ -1,70 +1,126 @@
-/* siteplan.css - Site Plan styles */
-:root{
-  --bg: #0f1221;        /* dark background */
-  --card: #0f1724;      /* slightly lighter card */
-  --primary: #1e1e2f;   /* deep slate */
-  --accent: #ff4757;    /* neon accent */
-  --text: #e6eef8;      /* light text */
-  --muted: #9aa4b2;
-  --container-width: 1100px;
+/* siteplan.css — FoodieFind */
+
+/* Base styles */
+:root {
+  --bg: #fffaf8;
+  --text: #222;
+  --muted: #6b6b6b;
+  --primary: #FF6B35;
+  --accent: #F7C59F;
+  --radius: 12px;
+  --container: 1000px;
+  --transition: 200ms ease;
+  --heading-font: "Poppins", sans-serif;
+  --body-font: "Open Sans", system-ui, sans-serif;
 }
 
-/* Reset */
-*{ box-sizing: border-box; }
-html,body{ height:100%; margin:0; padding:0; font-family: Roboto, Arial, sans-serif; background: linear-gradient(180deg,var(--bg) 0%, #071025 100%); color:var(--text); }
-
-/* Layout container used for header/main/footer */
-.container {
-  max-width: var(--container-width);
-  margin: 1.5rem auto;
-  padding: 1.25rem;
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
 }
 
-/* header */
-.site-header { background: transparent; padding: 0; }
-.site-header .container { text-align:center; background: transparent; box-shadow:none; padding: 2rem 1.25rem; }
-.site-header h1 { font-family: 'Press Start 2P', 'Roboto', sans-serif; color: var(--accent); font-size: 1.6rem; margin:0; }
-.byline { margin-top:0.4rem; color: var(--muted); font-size:0.95rem; }
-
-/* content */
-main { padding: 0; }
-h2 { color: var(--text); margin-top: 0.8rem; margin-bottom: 0.4rem; }
-p, li { color: var(--text); font-size: 1rem; line-height: 1.5; }
-ul { margin-left: 1.25rem; }
-
-/* color samples row */
-.color-row { display:flex; gap: 12px; margin:0.5rem 0 1rem 0; flex-wrap:wrap; }
-.color-sample {
-  width:160px;
-  height:56px;
-  border-radius:6px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:white;
-  font-weight:700;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+/* Header */
+header {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 5px solid var(--accent);
 }
-.color-primary { background: var(--primary); }
-.color-accent { background: var(--accent); }
-.color-text { background: var(--card); color: var(--muted); }
 
-/* wireframe images */
-.wireframe { width:100%; max-width:1000px; display:block; margin: 1rem auto; border-radius:6px; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
-
-/* footer */
-.site-footer { margin-top: 1rem; background: transparent; padding-bottom: 2rem; }
-.site-footer .container { text-align:center; background: transparent; box-shadow:none; padding: 0.8rem 1.25rem; }
-.site-footer p { margin: 0.25rem 0; color: var(--muted); font-size: 0.95rem; }
-
-/* Responsiveness: reduce container margins on small screens */
-@media (max-width: 700px) {
-  .container { margin: 0.6rem; padding: 1rem; }
-  .color-sample { width: 48%; height:48px; font-size:0.9rem; }
-  .site-header .container { padding: 1.25rem; }
-  h2 { font-size: 1.05rem; }
+header h1 {
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  margin: 0 0 0.3rem;
 }
+
+header p {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Main container */
+main {
+  max-width: var(--container);
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  background: white;
+  border-radius: var(--radius);
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
+  transition: transform var(--transition);
+}
+
+section:hover {
+  transform: translateY(-3px);
+}
+
+h2 {
+  font-family: var(--heading-font);
+  color: var(--primary);
+  margin-top: 0;
+}
+
+h3 {
+  font-family: var(--heading-font);
+  color: var(--text);
+  margin-bottom: .3rem;
+}
+
+/* Lists and links */
+ul {
+  list-style: square;
+  padding-left: 1.5rem;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Images */
+img {
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  margin: .5rem 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--primary);
+  color: white;
+  font-size: .9rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 
